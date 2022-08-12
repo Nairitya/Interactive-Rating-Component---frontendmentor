@@ -33,30 +33,37 @@ main {
   border-radius: 30px;
 }
 
-h1 {
-  color: #fff;
-  font-size: 1.5em;
-  font-weight: 700;
-}
-
 img {
   background-color: hsl(213, 21%, 22%);
   padding: 10px;
   border-radius: 100%;
+  margin-bottom: 1.5em;
 }
 
+h1 {
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+p {
+  margin-bottom: 1.5em;
+}
 /* RATING SECTION */
 
 .rating-section {
   position: relative;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 1.5em;
 }
 
 input {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  display: none;
 }
 
 label {
@@ -71,6 +78,7 @@ label {
 
 label:hover {
   background-color: hsl(25, 97%, 53%);
+  cursor: pointer;
 }
 
 input:checked + label {
@@ -90,4 +98,10 @@ input:checked + label {
   border: none;
   padding: 1em;
   border-radius: 999px;
+}
+
+.submit-btn:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(25, 97%, 53%);
+  cursor: pointer;
 }
