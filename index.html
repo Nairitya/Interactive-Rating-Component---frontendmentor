@@ -13,36 +13,36 @@
     />
 
     <title>Frontend Mentor | Interactive rating component</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   </head>
   <body>
     <!-- Rating state start -->
     <main>
       <img src="images/icon-star.svg" />
+
       <h1>How did we do?</h1>
+
       <p>
         Please let us know how we did with your support request. All feedback is
         appreciated to help us improve our offering!
       </p>
-      <div class="rating-section">
-        <input type="radio" name="radio" class="rating-btn" id="one" /><label
-          for="one"
-          >1</label
-        >
-        <input type="radio" name="radio" class="rating-btn" id="two" /><label
-          for="two"
-          >2</label
-        >
-        <input type="radio" name="radio" class="rating-btn" id="three" /><label
-          for="three"
-          >3</label
-        >
+
+      <!-- Rating Circles  -->
+      <form class="rating-section">
+        <input type="radio" name="radio" class="rating-btn" id="one" />
+        <label for="one">1</label>
+
+        <input type="radio" name="radio" class="rating-btn" id="two" />
+        <label for="two">2</label>
+
+        <input type="radio" name="radio" class="rating-btn" id="three" />
+        <label for="three">3</label>
+
         <input type="radio" name="radio" class="rating-btn" id="four" />
         <label for="four">4</label>
+
         <input type="radio" name="radio" class="rating-btn" id="five" />
         <label for="five">5</label>
-      </div>
+      </form>
 
       <button class="submit-btn">S U B M I T</button>
     </main>
