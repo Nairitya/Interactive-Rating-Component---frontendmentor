@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+body {
+  background-color: hsl(216, 12%, 8%);
+  box-sizing: border-box;
+  color: hsl(217, 12%, 63%);
+  font-family: "Overpass", sans-serif;
+  font-weight: 400;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  background: radial-gradient(
+    ellipse at top,
+
+    hsl(213, 19%, 18%) 10%,
+    hsl(218, 13%, 13%)
+  );
+  max-width: 360px;
+  padding: 1.5em;
+  border-radius: 30px;
+}
+
+h1 {
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+img {
+  background-color: hsl(213, 21%, 22%);
+  padding: 10px;
+  border-radius: 100%;
+}
+
+/* RATING SECTION */
+
+.rating-section {
+  position: relative;
+}
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+label {
+  width: 20px;
+  height: 20px;
+  background-color: hsl(213, 21%, 22%);
+  padding: 20px;
+  display: inline-block;
+  text-align: center;
+  line-height: 150%;
+  border-radius: 100%;
+}
+
+label:hover {
+  background-color: hsl(25, 97%, 53%);
+}
+
+input:checked + label {
+  background-color: hsl(217, 12%, 63%);
+  color: hsl(213, 19%, 18%);
+}
+
+/* SUBMIT BUTTON */
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  font-size: 0.9em;
+  font-weight: 400;
+  background-color: hsl(25, 97%, 53%);
+  color: #fff;
+  border: none;
+  padding: 1em;
+  border-radius: 999px;
+}
