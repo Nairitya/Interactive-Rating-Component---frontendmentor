@@ -21,23 +21,8 @@ body {
   padding: 0;
 }
 
-main {
-  background: radial-gradient(
-    ellipse at top,
-
-    hsl(213, 19%, 18%) 10%,
-    hsl(218, 13%, 13%)
-  );
-  max-width: 360px;
-  padding: 1.5em;
-  border-radius: 30px;
-}
-
-img {
-  background-color: hsl(213, 21%, 22%);
-  padding: 10px;
-  border-radius: 100%;
-  margin-bottom: 1.5em;
+.hidden {
+  display: none;
 }
 
 h1 {
@@ -50,9 +35,30 @@ h1 {
 p {
   margin-bottom: 1.5em;
 }
+
+.rating-section,
+.thankyou-section {
+  background: radial-gradient(
+    ellipse at top,
+
+    hsl(213, 19%, 18%) 10%,
+    hsl(218, 13%, 13%)
+  );
+  max-width: 360px;
+  padding: 1.5em;
+  border-radius: 30px;
+}
+
 /* RATING SECTION */
 
-.rating-section {
+.star-image {
+  background-color: hsl(213, 21%, 22%);
+  padding: 10px;
+  border-radius: 100%;
+  margin-bottom: 1.5em;
+}
+
+.stars-section {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -81,17 +87,22 @@ label:hover {
   cursor: pointer;
 }
 
-input:checked + label {
+input:checked + label,
+input:focus + label {
   background-color: hsl(217, 12%, 63%);
   color: hsl(213, 19%, 18%);
 }
 
 /* SUBMIT BUTTON */
 
+#submit-btn-link {
+  text-decoration: none;
+}
+
 .submit-btn {
   display: block;
   width: 100%;
-  font-size: 0.9em;
+  font-size: 1em;
   font-weight: 400;
   background-color: hsl(25, 97%, 53%);
   color: #fff;
@@ -100,8 +111,50 @@ input:checked + label {
   border-radius: 999px;
 }
 
-.submit-btn:hover {
+.submit-btn:hover,
+.submit-btn:focus {
   background-color: hsl(0, 0%, 100%);
   color: hsl(25, 97%, 53%);
   cursor: pointer;
+}
+
+/* THANK YOU STATE CSS */
+
+.thankyou-section {
+  text-align: center;
+}
+
+.thankyou-image {
+  margin-bottom: 1.5em;
+}
+
+.rating-text {
+  display: inline-block;
+  padding: 8px 12px;
+  color: hsl(25, 97%, 53%);
+  background-color: hsl(213, 21%, 22%);
+  width: max-content;
+  border-radius: 999px;
+}
+
+/* Media Queries */
+
+@media (max-width: 376px) {
+  body {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  main {
+    width: 80%;
+  }
+  section {
+    max-width: 100%;
+  }
+  label {
+    width: 40px;
+    height: 40px;
+    line-height: 280%;
+  }
 }
