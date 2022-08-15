@@ -1,4 +1,3 @@
-alert("Working");
 let isClicked = false;
 let length = document.getElementsByClassName("rating-btn").length;
 let key;
